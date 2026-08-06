@@ -16,54 +16,51 @@ const services = [
     id: "buy",
     number: "01",
     title: "Buy a Home",
-    copy: "Finding your next home should feel clear and well-supported. Whether you are purchasing for the first time or adding to your portfolio, Commonwealth Realty provides personalized guidance, market insight, and strategic negotiation throughout the process.",
+    copy: "Finding your dream home has never been easier. Whether you’re a first-time buyer or a seasoned investor, our dedicated agents provide personalized guidance, market expertise, and strategic negotiation to ensure your purchase is seamless and rewarding.",
     benefits: [
       "Property discovery",
-      "Market guidance",
-      "Offer strategy",
-      "Negotiation",
+      "Market expertise",
+      "Personalized guidance",
+      "Strategic negotiation",
       "Transaction support",
     ],
-    cta: "Start Your Home Search",
+    cta: "Buy a Home",
     href: "/home-search",
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+    image: "/images/hero/statement-residence.jpg",
     layout: "split" as const,
   },
   {
     id: "sell",
     number: "02",
     title: "Sell a Home",
-    copy: "Selling your property requires thoughtful positioning, clear communication, and a strong understanding of the market. Commonwealth Realty helps owners prepare, price, market, and negotiate with confidence.",
+    copy: "Selling your property doesn’t have to be complicated. Our expert real estate agents help you price strategically, market effectively, and negotiate confidently—ensuring you achieve maximum value with minimal stress. List your property with us and experience the Commonwealth Realty difference.",
     benefits: [
-      "Pricing strategy",
-      "Property preparation",
-      "Targeted marketing",
-      "Buyer qualification",
-      "Negotiation support",
+      "Strategic pricing",
+      "Effective marketing",
+      "Confident negotiation",
+      "Maximum value focus",
+      "Listing support",
     ],
-    cta: "Discuss Selling Your Property",
+    cta: "Sell a Home",
     href: "/contact",
-    image:
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80",
+    image: "/images/hero/statement-detail.jpg",
     layout: "stacked" as const,
   },
   {
     id: "commercial",
     number: "03",
-    title: "Commercial Real Estate",
-    copy: "Commonwealth Realty helps businesses and investors identify commercial opportunities aligned with their operational needs and long-term objectives.",
+    title: "Commercial",
+    copy: "Looking for the ideal commercial property to elevate your business? Our experienced team connects you with prime office spaces, retail locations, and industrial properties designed to maximize your investment and business success. Trust Commonwealth Realty to deliver strategic solutions tailored to your specific commercial needs.",
     benefits: [
-      "Property sourcing",
-      "Location evaluation",
-      "Investment guidance",
-      "Market analysis",
-      "Negotiation and transaction support",
+      "Office spaces",
+      "Retail locations",
+      "Industrial properties",
+      "Investment strategy",
+      "Business-focused solutions",
     ],
-    cta: "Explore Commercial Opportunities",
+    cta: "Learn More",
     href: "/properties?category=commercial",
-    image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80",
+    image: "/images/hero/cta-architecture.jpg",
     layout: "editorial" as const,
   },
 ];
@@ -73,10 +70,10 @@ export default function ServicesPage() {
     <>
       <PageHero
         eyebrow="Our Services"
-        title="Guidance Tailored to the Decision Ahead"
-        description="Residential and commercial pathways shaped around clarity, timing, and Central Florida market knowledge."
-        image="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=80"
-        imageAlt="Architectural exterior detail of a Central Florida home"
+        title="Services"
+        description="Personalized guidance for buying, selling, and commercial real estate throughout Central Florida."
+        image="/images/hero/statement-residence.jpg"
+        imageAlt="Central Florida residence exterior"
       />
 
       <section className="section bg-cream">

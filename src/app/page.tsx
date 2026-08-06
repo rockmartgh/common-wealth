@@ -27,29 +27,26 @@ const services = [
   {
     id: "buy",
     title: "Buy a Home",
-    copy: "Whether you are purchasing your first home or searching for your next property, receive clear guidance, informed advice, and personal support throughout the process.",
-    cta: "Start Your Home Search",
+    copy: "Finding your dream home has never been easier. Whether you’re a first-time buyer or a seasoned investor, our dedicated agents provide personalized guidance, market expertise, and strategic negotiation.",
+    cta: "Buy a Home",
     href: "/home-search",
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80",
+    image: "/images/hero/statement-residence.jpg",
   },
   {
     id: "sell",
     title: "Sell a Home",
-    copy: "Position your property strategically with thoughtful pricing, focused marketing, and experienced negotiation.",
-    cta: "Discuss Selling Your Property",
+    copy: "Selling your property doesn’t have to be complicated. Our expert agents help you price strategically, market effectively, and negotiate confidently—so you achieve maximum value with minimal stress.",
+    cta: "Sell a Home",
     href: "/contact",
-    image:
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=80",
+    image: "/images/hero/statement-detail.jpg",
   },
   {
     id: "commercial",
-    title: "Commercial Real Estate",
-    copy: "Identify commercial opportunities aligned with your business goals, investment strategy, and long-term plans.",
-    cta: "Explore Commercial Opportunities",
+    title: "Commercial",
+    copy: "Looking for the ideal commercial property to elevate your business? We connect you with prime office spaces, retail locations, and industrial properties tailored to your goals.",
+    cta: "Learn More",
     href: "/services#commercial",
-    image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80",
+    image: "/images/hero/cta-architecture.jpg",
   },
 ];
 

@@ -11,7 +11,7 @@ export const navLinks = [
 export const serviceLinks = [
   { href: "/services#buy", label: "Buy a Home" },
   { href: "/services#sell", label: "Sell a Home" },
-  { href: "/services#commercial", label: "Commercial Real Estate" },
+  { href: "/services#commercial", label: "Commercial" },
 ] as const;
 
 export const contactInfo = {

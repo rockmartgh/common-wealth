@@ -14,7 +14,7 @@ import {
 export const metadata: Metadata = {
   title: "Properties",
   description:
-    "Browse residential and commercial properties represented by Commonwealth Realty throughout Central Florida.",
+    "Browse current listings represented by Commonwealth Realty throughout Central Florida.",
 };
 
 type PropertiesPageProps = {
@@ -35,10 +35,10 @@ export default async function PropertiesPage({
     <>
       <PageHero
         eyebrow="Properties"
-        title="Selected Residences & Commercial Opportunities"
-        description="A curated view of current listings—presented with clarity, space, and the details that matter."
-        image="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=80"
-        imageAlt="Featured Central Florida residence exterior"
+        title="Current Listings"
+        description="A clear view of active properties represented by Commonwealth Realty."
+        image="/images/properties/100-huntswood-court.jpg"
+        imageAlt="100 Huntswood Court in Longwood, Florida"
       />
 
       <section className="section bg-cream">

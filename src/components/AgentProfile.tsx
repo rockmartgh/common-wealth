@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { type Agent } from "@/data/agents";
+import { AgentSocialLinks } from "./AgentSocialLinks";
 import { Button } from "./Button";
 
 type AgentProfileProps = {
@@ -64,6 +65,10 @@ export function AgentProfile({
           >
             {agent.email}
           </a>
+        </div>
+
+        <div className="mt-5">
+          <AgentSocialLinks social={agent.social} name={agent.name} />
         </div>
 
         <div className="mt-8">

@@ -37,7 +37,7 @@ export function PropertyFilters({
           onChange={setCategory}
           options={[
             { value: "all", label: "All Properties" },
-            { value: "residential", label: "Buy / Residential" },
+            { value: "residential", label: "Residential" },
             { value: "commercial", label: "Commercial" },
           ]}
         />
@@ -49,7 +49,7 @@ export function PropertyFilters({
             { value: "all", label: "Any Status" },
             { value: "For Sale", label: "For Sale" },
             { value: "Pending", label: "Pending" },
-            { value: "Commercial", label: "Commercial" },
+            { value: "Sold", label: "Sold" },
           ]}
         />
         <FilterSelect

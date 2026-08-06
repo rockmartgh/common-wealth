@@ -1,3 +1,8 @@
+export type AgentSocial = {
+  facebook: string;
+  instagram: string;
+};
+
 export type Agent = {
   slug: string;
   name: string;
@@ -12,6 +17,7 @@ export type Agent = {
   image: string;
   imageAlt: string;
   cta: string;
+  social: AgentSocial;
 };
 
 export const agents: Agent[] = [
@@ -37,6 +43,10 @@ export const agents: Agent[] = [
     image: "/images/agents/renee-reed.jpg",
     imageAlt: "Portrait of Renee Reed, First-Time Buyer Expert at Commonwealth Realty",
     cta: "Meet Renee",
+    social: {
+      facebook: "https://www.facebook.com/share/1F6rrtewuv/",
+      instagram: "https://www.instagram.com/realtorrenee_fl/",
+    },
   },
   {
     slug: "anita-boyd",
@@ -60,5 +70,9 @@ export const agents: Agent[] = [
     image: "/images/agents/anita-boyd.jpg",
     imageAlt: "Portrait of Anita Boyd, Luxury and Commercial Expert at Commonwealth Realty",
     cta: "Meet Anita",
+    social: {
+      facebook: "https://www.facebook.com/CommonwealthRealtyCorp",
+      instagram: "https://www.instagram.com/anitareal_estate/",
+    },
   },
 ];

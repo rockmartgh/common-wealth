@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { agents } from "@/data/agents";
+import { AgentSocialLinks } from "./AgentSocialLinks";
 import { Button } from "./Button";
 import { Reveal } from "./Reveal";
 
@@ -72,6 +73,10 @@ export function AgentsPreview({ ctaToContact = false }: AgentsPreviewProps) {
                     >
                       {agent.email}
                     </a>
+                  </div>
+
+                  <div className="mt-5">
+                    <AgentSocialLinks social={agent.social} name={agent.name} />
                   </div>
 
                   <div className="mt-7">
