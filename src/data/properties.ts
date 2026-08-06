@@ -19,7 +19,8 @@ export type Property = {
   agentSlug: "renee-reed" | "anita-boyd";
 };
 
-export const properties: Property[] = [
+/** Seed used when Redis is empty or unavailable locally. */
+export const seedProperties: Property[] = [
   {
     slug: "100-huntswood-court",
     status: "For Sale",
@@ -61,12 +62,4 @@ export function formatPrice(price: number) {
     currency: "USD",
     maximumFractionDigits: 0,
   }).format(price);
-}
-
-export function getPropertyBySlug(slug: string) {
-  return properties.find((property) => property.slug === slug);
-}
-
-export function getFeaturedProperty() {
-  return properties.find((property) => property.featured) ?? properties[0];
 }

@@ -6,7 +6,8 @@ import { ContactForm } from "@/components/ContactForm";
 import { FinalCta } from "@/components/FinalCta";
 import { Reveal } from "@/components/Reveal";
 import { contactInfo } from "@/data/navigation";
-import { formatPrice, getFeaturedProperty } from "@/data/properties";
+import { formatPrice } from "@/data/properties";
+import { getFeaturedProperty } from "@/lib/properties-store";
 
 const specialties = [
   "Luxury residential properties",
@@ -50,8 +51,10 @@ const services = [
   },
 ];
 
-export default function HomePage() {
-  const featured = getFeaturedProperty();
+export const dynamic = "force-dynamic";
+
+export default async function HomePage() {
+  const featured = await getFeaturedProperty();
 
   return (
     <>
@@ -202,6 +205,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Property */}
+      {featured ? (
       <section className="section bg-cream">
         <div className="site-container">
           <Reveal>
@@ -286,6 +290,7 @@ export default function HomePage() {
           </Reveal>
         </div>
       </section>
+      ) : null}
 
       {/* Services */}
       <section className="section bg-ivory">

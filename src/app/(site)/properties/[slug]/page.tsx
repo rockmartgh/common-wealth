@@ -7,25 +7,23 @@ import { ContactForm } from "@/components/ContactForm";
 import { PropertyCard } from "@/components/PropertyCard";
 import { Reveal } from "@/components/Reveal";
 import { agents } from "@/data/agents";
+import { formatPrice } from "@/data/properties";
 import {
-  formatPrice,
   getPropertyBySlug,
-  properties,
-} from "@/data/properties";
+  listProperties,
+} from "@/lib/properties-store";
 
 type PropertyPageProps = {
   params: Promise<{ slug: string }>;
 };
 
-export async function generateStaticParams() {
-  return properties.map((property) => ({ slug: property.slug }));
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
   params,
 }: PropertyPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const property = getPropertyBySlug(slug);
+  const property = await getPropertyBySlug(slug);
   if (!property) return { title: "Property" };
   return {
     title: `${property.address}, ${property.city}`,
@@ -37,11 +35,12 @@ export default async function PropertyDetailPage({
   params,
 }: PropertyPageProps) {
   const { slug } = await params;
-  const property = getPropertyBySlug(slug);
+  const property = await getPropertyBySlug(slug);
   if (!property) notFound();
 
   const agent = agents.find((item) => item.slug === property.agentSlug)!;
-  const similar = properties
+  const all = await listProperties();
+  const similar = all
     .filter(
       (item) =>
         item.slug !== property.slug && item.category === property.category
@@ -61,7 +60,7 @@ export default async function PropertyDetailPage({
         </div>
         <div className="relative min-h-[58vh] overflow-hidden">
           <Image
-            src={property.gallery[0]}
+            src={property.gallery[0] ?? property.image}
             alt={`${property.address} primary view`}
             fill
             priority
@@ -127,7 +126,7 @@ export default async function PropertyDetailPage({
               <div className="mt-12 grid gap-4 sm:grid-cols-2">
                 {property.gallery.slice(1).map((image, index) => (
                   <div
-                    key={image}
+                    key={`${image}-${index}`}
                     className="img-zoom relative aspect-[4/3]"
                   >
                     <Image
